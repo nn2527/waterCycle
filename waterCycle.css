@@ -1,0 +1,83 @@
+h1, h2, h3, h4, p {
+  color: white;
+  text-align: center;
+}
+input {
+  text-align: center;
+}
+#app {
+  text-align: center;
+}
+body {
+  background-image: url(https://media.istockphoto.com/photos/beautiful-sky-with-white-clouds-picture-id182412483?b=1&k=20&m=182412483&s=170667a&w=0&h=IirdBpxBNaXe0bwcNz7ruNbk1FL18IiTxZ6PCK44TOw=);
+  background-size: cover;
+}
+
+.dot {
+  background: #006eae; 
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%; 
+  display: inline-block; 
+  margin-top: 30vh;
+  margin-left: 1em;
+  box-shadow: 0px 0px 10px 3px white;
+}
+
+.dotUp {
+  animation-name: moveUp;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveUp {
+  from {margin-top: 30vh;}
+  to {margin-top: 5vh;}
+}
+
+.dotGather {
+  margin-top: 5vh;
+  animation-name: condense;
+  animation-duration: 2s;
+  animation-direction: normal;
+}
+
+@keyframes condense {
+  from {width: 30px; height: 30px;}
+  to {width: 15px; height: 15px;}
+}
+
+.dotDown {
+  animation-name: moveDown;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveDown {
+  from {margin-top: 5vh;}
+  to {margin-top: 30vh;}
+}
+button {
+  color: #000066;
+  background-color: whitesmoke;
+  cursor: pointer;
+  border: 2px double #0000b3;
+  border-radius: 7px;
+}
+button:hover {
+  background-color: #ffe6ee;
+  color: #ff6699;
+  border-color: #ff3377;
+}
+
+#wrap {
+  filter: url('#filter');
+}
+
+#display {
+  color: white;
+  font-size: 12vw;
+  filter: blur(3px);
+}
