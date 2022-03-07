@@ -1,0 +1,37 @@
+<html>
+<head>
+  <link rel = "stylesheet" href="waterCycle.css">
+  <script src="waterCycle.js"></script>
+</head>
+<body>
+<div id="app">
+  <h1>Water Cycle</h1>
+  <h3>Let's learn how water cycle works by writing the keywords in the space provided below </h3>
+  <p>Keywords:<br>
+    evaporation<br>
+    condensation<br>
+    precipitation<br><br>
+  <input v-model='typeHere' placeholder="Type a keyword here">
+  <br><br>
+  <button @click="seeChange">Submit</button>
+  <div v-show="learning">
+      <p>-- Learning --</p>
+<h3 style='padding: 0 10%;'> {{ printcontent }}</h3>
+    <!-- Component Stuff Here -->
+    <component-name v-for="n in count"></component-name>
+  </div>
+<!--   cloud effect from https://segmentfault.com/a/1190000041189786/en -->
+  
+  <div id='wrap'>
+  <div id='display'>{{typeHere}}</div>
+
+<svg width="0">
+  <filter id="filter">
+    <feTurbulence id="turbulence" type="fractalNoise" baseFrequency=".02" numOctaves="10" />
+    <feDisplacementMap in="SourceGraphic" scale="25" />
+  </filter>
+</svg>
+    </div>
+</div>
+</body>
+</html>
